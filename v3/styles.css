@@ -1,0 +1,98 @@
+/*
+Setjum inn „reset“ sem fjarlægir margin og padding af öllu
+Þessu má ekki breyta
+*/
+* {
+    margin: 0;
+    padding: 0;
+  }
+ body {
+  background-color: pink;
+  }
+
+  
+  /*
+  Reiknum stærð á öllum boxum sem border-box.
+  Þessu má breyta eða fjarlægja.
+  */
+  html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  /* og látum erfast á allt */
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  /* hjálpar class sem felur sjónrænt en skjálesarar lesa */
+  .sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+  }
+  
+  /* Uppsetning á síðu—layout */
+  .content {
+    /* Lætur börn .content raða sér með _flexbox_ */
+    display: flex;
+    /* röðun sé í dálkaröð (niður) */
+    flex-direction: column;
+  }
+  
+  .content > header {
+  }
+  
+  .content > nav {
+  }
+  
+  .content > main {
+    /* Lætur <main> taka allt auka pláss sem er í boði */
+    flex: 1;
+  }
+  
+  .content > footer {
+  }
+  
+  /* almennar skilgreiningar */
+  
+  h1, h2 {
+    /* TODO setja almennar skilgreinar fyrir fyrirsagnir */
+  }
+  
+  a {
+    /* TODO setja almennar skilgreinar fyrir tengla */
+  }
+  
+  /* nav — valmynd */
+  
+  nav ul {
+    /* TODO */
+  }
+  
+  nav ul li {
+    /* TODO */
+  }
+  
+  /* TODO */
+  
+  
+  /* main — meginmál */
+  
+  /* TODO */
+  
+  /* töflur */
+  
+  table {
+    border-spacing: 0;
+  }
+  
+  /* TODO */
+  
+  /* form */
+  
+  /* TODO */

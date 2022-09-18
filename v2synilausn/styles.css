@@ -6,11 +6,101 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
     margin: 0;
     padding: 0;
   }
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+
  body {
-  background-color: pink;
+  background-color: white;
   }
 
-  
+  p{ 
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  }
+  main p:before{
+    content: "\A";
+    white-space: pre;
+  }
+  h1,h2,a,ul,li,strong,h4,fieldset,legend{
+    font-family: 'Inter', sans-serif;
+  }
+  a{
+    color: black;
+  }
+  a:hover{
+    color: blueviolet
+  }
+  h3{
+    margin-top: 1rem;
+  }
+  header{
+    background-color: #00bfff;
+    padding:1rem;
+  }
+  section ol {
+    margin-left: 2rem;
+  }
+  .footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    background-color: #00bfff;
+  }
+  h2.Forritun{
+    padding:1rem;
+  }
+  strong{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+   nav{
+    font-size: 1.5em;
+    text-align: left;
+   }
+   nav li {
+    display: inline-block;
+    padding:1rem;
+   }
+   nav li a {
+    text-decoration: none;
+   }
+   .myndindex{
+    float:left;
+    padding-right: 2rem;
+   }
+   h4{
+    font-weight: 400;
+    padding-right:1rem;
+    margin:1rem;
+   }
+   main li{
+    margin:5px;
+   }
+   footer{
+    margin:1rem;
+   }
+   fieldset{
+    border: 2px solid #00bfff;
+   }
+   fieldset legend{
+   font-weight: 200;
+   font-size: 1.5rem;
+   padding: 1rem;
+   margin-left: 3rem;
+   }
+
+  fieldset div{
+    margin: 1rem;
+    font-weight: 100;
+  }
+  fieldset input{
+    display: block;
+    margin-top: 0.5rem
+  }
   /*
   Reiknum stærð á öllum boxum sem border-box.
   Þessu má breyta eða fjarlægja.

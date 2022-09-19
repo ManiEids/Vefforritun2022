@@ -10,7 +10,7 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
   
   body {
-    font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: white;
   padding-bottom: 10rem;
   }
@@ -26,6 +26,9 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
   }
   h1,button,h2,a,ul,li,strong,h4,fieldset,legend,input,textarea{
     font-family: 'Inter', sans-serif;
+  }
+  h1{
+  margin-left: 4rem;
   }
   a{
     color: black;
@@ -45,10 +48,9 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
     margin-left: 2rem;
   }
   .footer{
-    position:fixed;
+    position: fixed;
     bottom: 0;
     width: 100%;
-    margin: 0;
     background-color: #00bfff;
   }
   h2.Forritun{
@@ -117,9 +119,6 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
  .annað{
  display:block;
  }
- textarea{
-
-}
 label {
   display:flex;
   align-items: baseline;
@@ -141,7 +140,6 @@ button{
   padding: 0.5rem;
   
 }
-.
   /*
   Reiknum stærð á öllum boxum sem border-box.
   Þessu má breyta eða fjarlægja.
@@ -169,6 +167,8 @@ button{
 
   /* Uppsetning á síðu—layout */
   .content {
+    margin-left: 4rem;
+    
     /* Lætur börn .content raða sér með _flexbox_ */
     display: flex;
     /* röðun sé í dálkaröð (niður) */

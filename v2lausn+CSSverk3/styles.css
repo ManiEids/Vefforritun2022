@@ -17,7 +17,7 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
 
   p{ 
   font-family: 'Inter', sans-serif;
-  font-weight: 200;
+  font-weight: 400;
   font-size: 1rem;
   }
   main p:before{
@@ -89,7 +89,7 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
     border: 2px solid #00bfff;
    }
    fieldset legend{
-   font-weight: 200;
+   font-weight: 400;
    font-size: 1.5rem;
    padding: 1rem;
    margin-left: 3rem;
@@ -97,7 +97,7 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
 
   fieldset div{
     margin: 1rem;
-    font-weight: 100;
+    font-weight: 400;
   }
   fieldset input{
     display: block;
@@ -132,7 +132,7 @@ margin-right: 1rem;
 }
 button{
   font-size: 1rem;
-  font-weight: 100;
+  font-weight: 400;
   margin-top: 1rem;
   background-color: #afebff;
   border-radius: 6px;

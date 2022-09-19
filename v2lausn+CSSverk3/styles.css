@@ -8,22 +8,23 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
   }
 
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-
-
- body {
+  
+  body {
+    font-family: 'Inter', sans-serif;
   background-color: white;
+  padding-bottom: 10rem;
   }
 
   p{ 
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
+  font-weight: 200;
   font-size: 1rem;
   }
   main p:before{
     content: "\A";
     white-space: pre;
   }
-  h1,h2,a,ul,li,strong,h4,fieldset,legend{
+  h1,button,h2,a,ul,li,strong,h4,fieldset,legend,input,textarea{
     font-family: 'Inter', sans-serif;
   }
   a{
@@ -38,12 +39,13 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
   header{
     background-color: #00bfff;
     padding:1rem;
+
   }
   section ol {
     margin-left: 2rem;
   }
   .footer{
-    position: fixed;
+    position:fixed;
     bottom: 0;
     width: 100%;
     margin: 0;
@@ -101,16 +103,55 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
     display: block;
     margin-top: 0.5rem
   }
+  .valkassi{
+  margin-left: 1rem;
+  padding-right: 1rem;
+ }
+ .hversvegna{
+ background-color: rgb(237, 232, 232);
+ font-size: 1rem;
+ border-radius: 5px;
+ margin-top: 0.5rem;
+ height: 2rem;
+ }
+ .annað{
+ display:block;
+ }
+ textarea{
+
+}
+label {
+  display:flex;
+  align-items: baseline;
+}
+input{
+  vertical-align: baseline;
+}
+input[type="checkbox"]{
+margin-right: 1rem;
+}
+button{
+  font-size: 1rem;
+  font-weight: 100;
+  margin-top: 1rem;
+  background-color: #afebff;
+  border-radius: 6px;
+  border-color: #00bfff;
+  text-align: center;
+  padding: 0.5rem;
+  
+}
+.
   /*
   Reiknum stærð á öllum boxum sem border-box.
   Þessu má breyta eða fjarlægja.
   */
   html {
-    box-sizing: border-box;
+    box-sizing: border-box;s
     font-size: 16px;
   }
   
-  /* og látum erfast á allt */
+  /* og látum erfast á allt */s
   *, *:before, *:after {
     box-sizing: inherit;
   }
@@ -125,7 +166,7 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
     white-space: nowrap; 
     width: 1px;
   }
-  
+
   /* Uppsetning á síðu—layout */
   .content {
     /* Lætur börn .content raða sér með _flexbox_ */
@@ -176,10 +217,21 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
   /* TODO */
   
   /* töflur */
-  
-  table {
+  table{
     border-spacing: 0;
   }
+  table  tr:nth-child(even){;
+  background-color: #afebff;
+  }
+  table td,th{
+    padding: 0.5rem;
+  }
+  table th{
+    text-align: left;
+    padding-top: 2rem;
+  }
+ 
+
   
   /* TODO */
   

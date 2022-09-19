@@ -3,96 +3,238 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
 Þessu má ekki breyta
 */
 * {
-    margin: 0;
-    padding: 0;
-  }
- body {
-  background-color: pink;
-  }
+  margin: 0;
+  padding: 0;
+}
 
-  
-  /*
-  Reiknum stærð á öllum boxum sem border-box.
-  Þessu má breyta eða fjarlægja.
-  */
-  html {
-    box-sizing: border-box;
-    font-size: 16px;
-  }
-  
-  /* og látum erfast á allt */
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  /* hjálpar class sem felur sjónrænt en skjálesarar lesa */
-  .sr-only:not(:focus):not(:active) {
-    clip: rect(0 0 0 0); 
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap; 
-    width: 1px;
-  }
-  
-  /* Uppsetning á síðu—layout */
-  .content {
-    /* Lætur börn .content raða sér með _flexbox_ */
-    display: flex;
-    /* röðun sé í dálkaröð (niður) */
-    flex-direction: column;
-  }
-  
-  .content > header {
-  }
-  
-  .content > nav {
-  }
-  
-  .content > main {
-    /* Lætur <main> taka allt auka pláss sem er í boði */
-    flex: 1;
-  }
-  
-  .content > footer {
-  }
-  
-  /* almennar skilgreiningar */
-  
-  h1, h2 {
-    /* TODO setja almennar skilgreinar fyrir fyrirsagnir */
-  }
-  
-  a {
-    /* TODO setja almennar skilgreinar fyrir tengla */
-  }
-  
-  /* nav — valmynd */
-  
-  nav ul {
-    /* TODO */
-  }
-  
-  nav ul li {
-    /* TODO */
-  }
-  
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+background-color: white;
+padding-bottom: 10rem;
+}
+
+p{ 
+font-family: 'Inter', sans-serif;
+font-weight: 200;
+font-size: 1rem;
+}
+main p:before{
+  content: "\A";
+  white-space: pre;
+}
+h1,button,h2,a,ul,li,strong,h4,fieldset,legend,input,textarea{
+  font-family: 'Inter', sans-serif;
+}
+a{
+  color: black;
+}
+a:hover{
+  color: blueviolet
+}
+h3{
+  margin-top: 1rem;
+}
+header{
+  background-color: #00bfff;
+  padding:1rem;
+
+}
+section ol {
+  margin-left: 2rem;
+}
+.footer{
+  position:fixed;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  background-color: #00bfff;
+}
+h2.Forritun{
+  padding:1rem;
+}
+strong{
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+ nav{
+  font-size: 1.5em;
+  text-align: left;
+ }
+ nav li {
+  display: inline-block;
+  padding:1rem;
+ }
+ nav li a {
+  text-decoration: none;
+ }
+ .myndindex{
+  float:left;
+  padding-right: 2rem;
+ }
+ h4{
+  font-weight: 400;
+  padding-right:1rem;
+  margin:1rem;
+ }
+ main li{
+  margin:5px;
+ }
+ footer{
+  margin:1rem;
+ }
+ fieldset{
+  border: 2px solid #00bfff;
+ }
+ fieldset legend{
+ font-weight: 200;
+ font-size: 1.5rem;
+ padding: 1rem;
+ margin-left: 3rem;
+ }
+
+fieldset div{
+  margin: 1rem;
+  font-weight: 100;
+}
+fieldset input{
+  display: block;
+  margin-top: 0.5rem
+}
+.valkassi{
+margin-left: 1rem;
+padding-right: 1rem;
+}
+.hversvegna{
+background-color: rgb(237, 232, 232);
+font-size: 1rem;
+border-radius: 5px;
+margin-top: 0.5rem;
+height: 2rem;
+}
+.annað{
+display:block;
+}
+textarea{
+
+}
+label {
+display:flex;
+align-items: baseline;
+}
+input{
+vertical-align: baseline;
+}
+input[type="checkbox"]{
+margin-right: 1rem;
+}
+button{
+font-size: 1rem;
+font-weight: 100;
+margin-top: 1rem;
+background-color: #afebff;
+border-radius: 6px;
+border-color: #00bfff;
+text-align: center;
+padding: 0.5rem;
+
+}
+.
+/*
+Reiknum stærð á öllum boxum sem border-box.
+Þessu má breyta eða fjarlægja.
+*/
+html {
+  box-sizing: border-box;s
+  font-size: 16px;
+}
+
+/* og látum erfast á allt */s
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* hjálpar class sem felur sjónrænt en skjálesarar lesa */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
+/* Uppsetning á síðu—layout */
+.content {
+  /* Lætur börn .content raða sér með _flexbox_ */
+  display: flex;
+  /* röðun sé í dálkaröð (niður) */
+  flex-direction: column;
+}
+
+.content > header {
+}
+
+.content > nav {
+}
+
+.content > main {
+  /* Lætur <main> taka allt auka pláss sem er í boði */
+  flex: 1;
+}
+
+.content > footer {
+}
+
+/* almennar skilgreiningar */
+
+h1, h2 {
+  /* TODO setja almennar skilgreinar fyrir fyrirsagnir */
+}
+
+a {
+  /* TODO setja almennar skilgreinar fyrir tengla */
+}
+
+/* nav — valmynd */
+
+nav ul {
   /* TODO */
-  
-  
-  /* main — meginmál */
-  
+}
+
+nav ul li {
   /* TODO */
-  
-  /* töflur */
-  
-  table {
-    border-spacing: 0;
-  }
-  
-  /* TODO */
-  
-  /* form */
-  
-  /* TODO */
+}
+
+/* TODO */
+
+
+/* main — meginmál */
+
+/* TODO */
+
+/* töflur */
+table{
+  border-spacing: 0;
+}
+table  tr:nth-child(even){;
+background-color: #afebff;
+}
+table td,th{
+  padding: 0.5rem;
+}
+table th{
+  text-align: left;
+  padding-top: 2rem;
+}
+
+
+
+/* TODO */
+
+/* form */
+
+/* TODO */

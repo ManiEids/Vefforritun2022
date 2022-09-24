@@ -206,7 +206,7 @@ footer{
   padding-top: 1rem;
   padding-bottom: 1rem;
   text-align: center;
-  position: fixed;
+  position: relative;
 }
 
 

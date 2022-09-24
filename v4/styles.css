@@ -54,7 +54,6 @@ body {
   font-size: var(--font-base-body-px);
   line-height: 1.5;
   font-family: var(--font-family-base);
-  padding-bottom: 10rem;
 }
 
 h1, h2, h3 {
@@ -171,6 +170,7 @@ display: flex;
 }
 section.examples2{
   display: flex;
+  padding-bottom: 10rem;
 }
 section.card{
   display:flex;
@@ -200,6 +200,7 @@ section.card{
 }
 
 footer{
+  display: block;
   bottom: 0;
   width: 100%;
   background-color: rgb(179, 204, 226);

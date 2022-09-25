@@ -87,11 +87,11 @@ main {
 /* Header */
 header {
 background-image:url("myndir/header.jpg");
-height:1400px;
+height:1000px;
 width: 100%;
 background-position: center;
 background-repeat: no-repeat;
-background-size: contain;
+background-size: auto;
 position: relative;
 }
 .headertext{
@@ -101,7 +101,8 @@ position: relative;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  line-height: 3rem;
+  line-height: 4rem;
+  font-size: x-large;
   
  }
  marquee{  

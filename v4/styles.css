@@ -86,25 +86,34 @@ main {
 
 /* Header */
 header {
+  display: flex;
+flex-direction: column;
 background-image:url("myndir/header.jpg");
 height:1000px;
 width: 100%;
 background-position: center;
 background-repeat: no-repeat;
-background-size: auto;
-position: relative;
+background-size:cover;
+background-attachment: fixed;
 }
 .headertext{
+display:flex;
+flex-direction: column;
   text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: white;
   line-height: 4rem;
   font-size: x-large;
-  
+  padding-top: 25%;
+  text-shadow: 2px 2px black;
  }
+ header.protection{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom:0;
+  left: 0;
+  z-index: 1;
+}
  marquee{  
  width: 1400px;
  }
@@ -117,6 +126,8 @@ position: relative;
   line-height: 1rem;
   padding: 1rem;
   text-decoration: none;
+  text-shadow: none;
+  
  }
  
 .button:hover{
@@ -147,8 +158,8 @@ section.info1{
 }
 section.info2{
   display: flex;
-  align-items: left;
   flex-direction: row-reverse;
+  padding-right: 2rem;
 }
 .efrimynd2{
   width: 50%;

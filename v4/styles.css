@@ -206,6 +206,7 @@ section.card{
   width: 100%;
   height: 100%;
   display: table-column;
+  flex-direction:column;
   text-align: left;
   line-height: 3rem;
   border-left: 1px black solid;

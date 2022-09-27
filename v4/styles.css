@@ -12,7 +12,9 @@ html {
 }
 
 /* og látum erfast á allt */
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -22,7 +24,7 @@ html {
   /* Grunn bilið okkar er 1rem == 16px */
   --spacing: 1rem;
   /* Hámarksbreidd á efni */
-  --max-width:1400px ;/*var 1400px
+  --max-width: 1400px; /*var 1400px
 
   --color-primary: #f0f0f8;
 
@@ -33,11 +35,11 @@ html {
   /* Letur stillingar */
   --font-base-body-px: 16px;
   --font-base-size: 1rem;
-  --font-family-base: 'Nunito', Helvetica, Arial, sans-serif;
-  --font-family-heading: 'Domine', Georgia, serif;
+  --font-family-base: "Nunito", Helvetica, Arial, sans-serif;
+  --font-family-heading: "Domine", Georgia, serif;
 }
 
-.wrapper{
+.wrapper {
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
@@ -56,7 +58,9 @@ body {
   font-family: var(--font-family-base);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-family-heading);
 }
 
@@ -67,8 +71,7 @@ img {
 .button {
   display: inline-block;
 
-
-  /* TODO útlit á button */ 
+  /* TODO útlit á button */
 }
 
 /* Layout */
@@ -87,37 +90,37 @@ main {
 /* Header */
 header {
   display: flex;
-flex-direction: column;
-background-image:url("myndir/header.jpg");
-height:1000px;
-width: 100%;
-background-position: center;
-background-repeat: no-repeat;
-background-size:cover;
-background-attachment: fixed;
+  flex-direction: column;
+  background-image: url("myndir/header.jpg");
+  height: 1000px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
-.headertext{
-display:flex;
-flex-direction: column;
+.headertext {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   color: white;
   line-height: 4rem;
   font-size: x-large;
   padding-top: 25%;
   text-shadow: 2px 2px black;
- }
- header.protection{
+}
+header.protection {
   position: absolute;
   top: 0;
   right: 0;
-  bottom:0;
+  bottom: 0;
   left: 0;
   z-index: 1;
 }
- marquee{  
- width: 1400px;
- }
- .button{
+marquee {
+  width: 1400px;
+}
+.button {
   background-color: rgb(232, 243, 246);
   color: #000;
   text-align: center;
@@ -127,23 +130,22 @@ flex-direction: column;
   padding: 1rem;
   text-decoration: none;
   text-shadow: none;
-  
- }
- 
-.button:hover{
-  box-shadow: 0 12px 16px 0 yellow, 0 17px 50px 0 rgba(0,0,0,0.19);
 }
-.button2{
-  background-color:white;
+
+.button:hover {
+  box-shadow: 0 12px 16px 0 yellow, 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.button2 {
+  background-color: white;
 }
 /* TODO */
 
 /* Upplýsingasvæði */
-section.info1{
+section.info1 {
   display: flex;
   align-items: center;
 }
-.efritexti{
+.efritexti {
   width: 50%;
   display: table-column;
   text-align: left;
@@ -151,77 +153,77 @@ section.info1{
   margin-left: 2rem;
   margin-right: 2rem;
 }
-.efrimynd{
+.efrimynd {
   width: 50%;
   padding: 4rem;
-  transform:rotate(5deg);
+  transform: rotate(5deg);
 }
-section.info2{
+section.info2 {
   display: flex;
   flex-direction: row-reverse;
   padding-right: 2rem;
 }
-.efrimynd2{
+.efrimynd2 {
   width: 50%;
   padding: 4rem;
-  transform:rotate(-5deg);
+  transform: rotate(-5deg);
 }
 /*dæmiumloren*/
 
-.daemi{
-margin-top: 3rem;
-margin-bottom: 3rem;
-word-spacing: 6px;
-margin-left: 3rem;
-
+.daemi {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  word-spacing: 6px;
+  margin-left: 3rem;
 }
 
 /* Cards */
-section.examples1{
-display: flex;
+section.examples1 {
+  display: flex;
 }
-section.examples2{
+section.examples2 {
   display: flex;
   padding-bottom: 10rem;
 }
-section.card{
-  display:flex;
+section.card {
+  display: flex;
   flex-direction: column;
   width: 50%;
   margin-right: 2rem;
-  margin-top:  2rem;
+  margin-top: 2rem;
   border-bottom: #000 1px solid;
 }
 
-.myndbot{
+.myndbot {
   order: -4;
   height: 400px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   align-items: center;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
 }
-.cardtexti{
+.cardtexti {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   width: 100%;
   height: 100%;
-  text-align: left;
   line-height: 3rem;
   border-left: 1px black solid;
   border-right: 1px black solid;
   line-height: 2rem;
   padding: 2rem;
 }
-.cardtexti p{
+
+.cardtexti p {
   margin-top: 1rem;
   margin-bottom: 1rem;
-
+}
+.cardbutton {
+  display: block;
 }
 
-
-footer{
+footer {
   display: block;
   bottom: 0;
   width: 100%;
@@ -233,6 +235,5 @@ footer{
 }
 
 .button-secondary {
-  background-color:white;
+  background-color: white;
 }
-  

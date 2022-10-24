@@ -1,0 +1,31 @@
+
+.info .content {
+  margin: auto;
+}
+
+.info .content p {
+  margin-bottom: calc(var(--spacing) * 2);
+}
+
+.info .kicker {
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.info .image {
+  display: flex;
+}
+
+.info .image img {
+  margin: auto;
+  transform: rotateZ(2deg);
+}
+
+.info-right .image img {
+  transform: rotateZ(-2deg);
+}
+
+.info-right .content {
+  order: 2;
+}

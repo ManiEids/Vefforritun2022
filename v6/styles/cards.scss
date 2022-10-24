@@ -1,0 +1,52 @@
+.cards {
+  display: grid;
+  gap: var(--gutter);
+  grid-template-rows: auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+  }
+
+  .card {
+    grid-column: span 6;
+  }
+}
+
+.card > .image {
+  height: 300px;
+  order: -1;
+}
+
+.card > .image img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 300px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  width: 100%;
+}
+
+.card > .content {  
+  border: 1px solid #999;
+  border-top: 0;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--spacing);
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.card > .content > p {
+  flex: 1;
+}

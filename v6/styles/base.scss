@@ -1,0 +1,38 @@
+/* Setjum inn „reset“ sem fjarlægir margin og padding af öllu */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Reiknum stærð á öllum boxum sem border-box */
+html {
+  box-sizing: border-box;
+
+  /* Lætur skroll innan síðu taka tíma */
+  scroll-behavior: smooth;
+}
+
+/* og látum erfast á allt */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  color: var(--color-text);
+  font-family: var(--font-family-base);
+  font-size: var(--font-base-body-px);
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-family-heading);
+}
+
+img {
+  max-width: 100%;
+}
+

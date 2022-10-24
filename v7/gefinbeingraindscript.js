@@ -1,3 +1,4 @@
+
 /** Lágmark bolla sem má velja. */
 const MIN_NUM_OF_CUPS = 2;
 
@@ -19,26 +20,11 @@ let points = 0;
  * @param {string | number} numAsString Tala sem á að athuga.
  * @param {number} min Lágmark sem tala má vera.
  * @param {number} max Hámark sem tala má vera.
- * @returns  {boolean}`true` ef tala er innan bils, annars `false`.
+ * @returns `true` ef tala er innan bils, annars `false`.
  */
 function isValidNum(numAsString, min, max) {
-  min = MIN_NUM_OF_CUPS;
-  max = MAX_NUM_OF_CUPS - played;
-
-  if (isNaN(numAsString)) {
-    return false;
-  }
-
-  // Ekki á bili
-  if (min >= numAsString || numAsString >= max) {
-    return false;
-  }
-
-  return true;
+  /* TODO útfæra */
 }
-console.assert(numAsString('2','11 ') === false, ' 11 er ekki valid(ekki milli 2 og 10 )');
-console.assert(numAsString('2','4') === true, '4 er valid (milli 2 og 10)');
-
 
 /**
  * Nær í gisk frá notanda.
@@ -46,8 +32,7 @@ console.assert(numAsString('2','4') === true, '4 er valid (milli 2 og 10)');
  * @param {number} numOfCups Heildar fjöldi bolla.
  * @returns `null` ef notandi hætti við, annars vali notanda sem tölu.
  */
- function getChoice(numOfCups) {
-  const val = prompt ('veldu bolla á bilinu min til max}')
+function getChoice(numOfCups) {
   /* TODO útfæra */
 }
 
@@ -76,11 +61,6 @@ Verður að vera gildi á bilinu [${MIN_NUM_OF_CUPS}, ${MAX_NUM_OF_CUPS}].
     if (numOfCups === null) {
       return;
     }
-    if(!isValidNum(numOfCups)){
-      console.error(`${numOfCups} er ekki löglegt gildi`);
-      return;
-    }
-  
   /* TODO útfæra */
   } while (true)
 }
@@ -91,3 +71,4 @@ Verður að vera gildi á bilinu [${MIN_NUM_OF_CUPS}, ${MAX_NUM_OF_CUPS}].
 function games() {
   /* TODO útfæra */
 }
+

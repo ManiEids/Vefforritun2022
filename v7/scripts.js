@@ -109,8 +109,7 @@ Verður að vera gildi á bilinu [${MIN_NUM_OF_CUPS}, ${MAX_NUM_OF_CUPS}].
 
       played++;
 
-      alert(`Viltu spila aftur?`);
-      /* í staðin fyrir alert gæti verið Y / N prompt og sett upp break statment fyrir N eða continue fyrir Y */
+      confirm(`Viltu spila aftur? `);
     } else {
       console.log("Notandi hætti við");
     }

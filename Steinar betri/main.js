@@ -59,6 +59,10 @@ function onCupClick(e) {
  */
 function createCups(num, parent) {
   // TODO útfæra
+  for (let i = 0; i < num; i++) {
+    let cup = createCup(i + 1, svg, onCupClick);
+    parent.append(cup);
+  }
 }
 
 /**
@@ -86,6 +90,13 @@ function onFormSubmit(e) {
   if (numberOfCups === "") {
     formErrorElement.classList.remove("form__error--hidden");
   } else {
+    let gameContainerElement = document.getElementById("game_container");
+    gameContainerElement.classList.remove("game__main--hidden");
+    let gameCupsContainerElement = document.getElementById(
+      "game_cups_container"
+    );
+    emptyElement(gameCupsContainerElement);
+    createCups(numberOfCups, gameCupsContainerElement);
     console.log("play game todo");
   }
 }

@@ -27,5 +27,23 @@ export function showScreen(screen) {
  * @returns Elementi fyrir bolla.
  */
 export function createCup(num, svg, onClick) {
-  // TODO útfæra
+  // Create cup element
+  let cup = document.createElement("div");
+  cup.className = "cup";
+
+  // Create cup content, add it to cup
+  let cupContent = document.createElement("div");
+  cupContent.className = "cup__content";
+  cupContent.appendChild(svg.cloneNode(true));
+
+  // Add cupContent to cup
+  cup.appendChild(cupContent);
+
+  // Create cup button
+  let cupButton = document.createElement("button");
+  cupButton.innerText = num;
+
+  // Add cupButton to cup
+  cup.appendChild(cupButton);
+  return cup;
 }

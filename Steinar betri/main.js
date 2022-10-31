@@ -48,8 +48,12 @@ document.querySelector("#max_cups").innerText = MAX_NUM_OF_CUPS;
  *                  ákveðinn bolla.
  * @returns
  */
-function onCupClick(e) {
+function onCupClick(event) {
   // TODO útfæra
+  console.log("clicked a cup: ", event);
+  console.log("Cup nr. " + event.target.innerText);
+  // Find button clicked (e.g. "cup-number-3")
+  // cupNumber3.getChild(svg).delete -> Sauðakóði
 }
 
 /**

@@ -34,6 +34,7 @@ export function createCup(num, svg, onClick) {
   // Create cup content, add it to cup
   let cupContent = document.createElement("div");
   cupContent.className = "cup__content";
+  cupContent.id = `cup-number-${num}`;
   cupContent.appendChild(svg.cloneNode(true));
 
   // Add cupContent to cup
@@ -42,6 +43,7 @@ export function createCup(num, svg, onClick) {
   // Create cup button
   let cupButton = document.createElement("button");
   cupButton.innerText = num;
+  cupButton.onclick = onClick;
 
   // Add cupButton to cup
   cup.appendChild(cupButton);

@@ -1,5 +1,5 @@
-import { isValidNum, randomNumber } from './lib/helpers.js';
-import { createCup, emptyElement, showScreen } from './lib/ui.js';
+import { isValidNum, randomNumber } from "./lib/helpers.js";
+import { createCup, emptyElement, showScreen } from "./lib/ui.js";
 
 /** Lágmark bolla sem má velja. */
 const MIN_NUM_OF_CUPS = 2;
@@ -31,10 +31,10 @@ const state = {
 // Afritum SVG sem er nákvæmlega eitt stykki af í DOM í byrjun
 // getum notað það oft í leiknum með:
 // element.appendChild(svg.cloneNode(true));
-const svg = document.querySelector('svg').cloneNode(true);
+const svg = document.querySelector("svg").cloneNode(true);
 
 // Setjum rétt gildi fyrir hámark í villuskilaboðum.
-document.querySelector('#max_cups').innerText = MAX_NUM_OF_CUPS;
+document.querySelector("#max_cups").innerText = MAX_NUM_OF_CUPS;
 
 /**
  * Meðhöndlar það sem gerist þegar notandi velur bolla:
@@ -46,7 +46,7 @@ document.querySelector('#max_cups').innerText = MAX_NUM_OF_CUPS;
  *
  * @param {event} e Atburður sem átti sér stað þegar notandi ýtti á takka fyrir
  *                  ákveðinn bolla.
- * @returns 
+ * @returns
  */
 function onCupClick(e) {
   // TODO útfæra
@@ -73,14 +73,22 @@ function createCups(num, parent) {
  * @param {event} e Atburður sem átti sér stað þegar form var sent.
  */
 function onFormSubmit(e) {
+  console.log("main.js - onFormSubmit");
   e.preventDefault();
 
-  const formError = document.querySelector('.form__error');
+  const formErrorElement = document.querySelector(".form__error");
 
-  formError.classList.add('form__error--hidden');
+  formErrorElement.classList.add("form__error--hidden");
 
-  // TODO útfæra
+  let numberOfCups = document.getElementById("cups").value;
+  console.log("numberOfCups: ", numberOfCups);
+
+  if (numberOfCups === "") {
+    formErrorElement.classList.remove("form__error--hidden");
+  } else {
+    console.log("play game todo");
+  }
 }
 
 // Tengir event handler við formið.
-document.querySelector('form').addEventListener('submit', onFormSubmit);
+document.querySelector("form").addEventListener("submit", onFormSubmit);

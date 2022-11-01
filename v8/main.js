@@ -11,7 +11,6 @@ let maxnew = 0;
 //bua til bolta
 
 var boltinn = document.getElementById("boltinn");
-console.log("boltinn = " + boltinn);
 
 let gameContainerElement = document.getElementById("game_container");
 let gamewaiting = document.getElementById("gamewaiting");
@@ -49,32 +48,24 @@ document.querySelector("#max_cups").innerText = MAX_NUM_OF_CUPS;
  * @returns
  */
 function onCupClick(event) {
-  // TODO útfæra
-  console.log("clicked a cup: ", event);
-  console.log("Cup nr. " + event.target.innerText);
-  console.log("evt class name " + event.target.className);
-
   //nafn á valinn bolla
   let cupclick = "cup-number-" + event.target.innerText;
 
   //finna bollann
   let svgdiv = document.getElementById(cupclick);
-  console.log("svgdiv er = " + svgdiv);
 
   //leita i bollanum
   let svgbolli = svgdiv.querySelector("svg");
-  console.log("svgbolli er =" + svgbolli);
 
   svgbolli.style.display = "none";
-
-  console.log("svg bolli = " + svgbolli);
 
   let slembitala = randomNumber(1, maxnew);
 
   let stigapottur = parseInt(event.target.innerText);
 
+  // Tékkar hvort tölvan sé með sama slembigildi og bollinn
+  // sem notandinn valdi
   if (slembitala == event.target.innerText) {
-    console.log("valdir sama og tölva");
     svgdiv.appendChild(boltinn);
     points += stigapottur - 1;
   } else {
@@ -116,7 +107,6 @@ function createCups(num, parent) {
  * @param {event} e Atburður sem átti sér stað þegar form var sent.
  */
 function onFormSubmit(e) {
-  console.log("main.js - onFormSubmit");
   e.preventDefault();
 
   const formErrorElement = document.querySelector(".form__error");
@@ -124,11 +114,8 @@ function onFormSubmit(e) {
   formErrorElement.classList.add("form__error--hidden");
 
   let numberOfCups = document.getElementById("cups").value;
-  console.log("numberOfCups: ", numberOfCups);
 
   maxnew = numberOfCups;
-
-  console.log("Max number of cups eftir input" + maxnew);
 
   if (numberOfCups === "") {
     formErrorElement.classList.remove("form__error--hidden");
@@ -145,7 +132,6 @@ function onFormSubmit(e) {
 
     emptyElement(gameCupsContainerElement);
     createCups(numberOfCups, gameCupsContainerElement);
-    console.log("play game todo");
   }
 }
 

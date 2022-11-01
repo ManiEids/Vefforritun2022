@@ -61,19 +61,16 @@ function onCupClick(event) {
 
   let slembitala = randomNumber(1, maxnew);
 
-  let stigapottur = parseInt(event.target.innerText);
-
   // Tékkar hvort tölvan sé með sama slembigildi og bollinn
   // sem notandinn valdi
+
   if (slembitala == event.target.innerText) {
     svgdiv.appendChild(boltinn);
-    points += stigapottur - 1;
-  } else {
-    console.log("valdir ekki sama og tölva");
+    points += currentPointsAvailable;
   }
 
   setTimeout((event) => {
-    gameContainerElement.classList.replace("game__main", "game__main--hidden");
+    gameContainerElement.classList.add("game__main--hidden");
     gamewaiting.classList.replace("game__waiting--hidden", "game__waiting");
   }, SHOW_WAITINGSCREEN_TIME);
 
@@ -116,6 +113,8 @@ function onFormSubmit(e) {
   let numberOfCups = document.getElementById("cups").value;
 
   maxnew = numberOfCups;
+
+  currentPointsAvailable = maxnew - 1;
 
   if (numberOfCups === "") {
     formErrorElement.classList.remove("form__error--hidden");

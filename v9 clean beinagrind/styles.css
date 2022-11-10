@@ -5,8 +5,8 @@
 
 :root {
   --font-base-body-px: 16px;
-  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue';
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue";
   --spacing: 1rem;
   --max-width: 1200px;
 
@@ -21,7 +21,9 @@ html {
   overflow-y: scroll;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -39,6 +41,7 @@ a {
   margin: 0 auto;
   padding: var(--spacing);
   width: 100%;
+  margin-left: 6rem;
 
   max-width: var(--max-width);
   min-height: 100vh;
@@ -48,6 +51,11 @@ a {
   display: flex;
   flex-direction: column;
   gap: var(--spacing);
+  margin-left: -3rem;
+}
+
+h1 {
+  font-size: 300%;
 }
 
 .layout__main {
@@ -81,4 +89,17 @@ a {
 
 .book__details {
   margin-bottom: var(--spacing);
+}
+.listBooks {
+  background-color: rgb(190, 190, 163);
+  padding: 0.5rem;
+  border-style: dotted;
+  margin-bottom: var(--spacing);
+}
+.listBooks::marker {
+  color: red;
+  font-size: 1rem;
+}
+.hide-search-List {
+  display: none;
 }

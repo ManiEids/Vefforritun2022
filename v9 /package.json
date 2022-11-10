@@ -5,7 +5,11 @@
   "main": ".eslintrc.js",
   "scripts": {
     "dev": "browser-sync start --server --files **/*.js styles.css index.html",
+    
     "lint": "eslint ./**/*.js",
+    "copy:html": "cpy ./*.html ./build/",
+    "copy:js": "cpy ./*.js ./build/",
+    "build": "concurrently npm:copy",
     "prettier": "prettier --write ."
   },
   "keywords": [],

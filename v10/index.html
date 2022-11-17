@@ -5,14 +5,21 @@
     <title>camera</title>
     <style>
       .freeky {
-        filter: invert(1);
+        filter: drop-shadow(16px 16px 20px red) invert(35%);
+      }
+      button {
+        background-color: red;
+        position: absolute;
+        padding: 3rem;
       }
     </style>
   </head>
 
   <body>
+    <h1>API sem biður um leyfi fyrir hljóð og mynd</h1>
+    <marquee>Máni Eiðsson Skilaverk 10 2022 vefforritun 1</marquee>
     <video></video>
-    <button>freeky</button>
+    <button>Breyta Filter</button>
     <script>
       const constraints = { audio: true, video: { width: 1280, height: 720 } };
 

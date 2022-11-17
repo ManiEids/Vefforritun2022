@@ -9,6 +9,13 @@
     <script>
       const cx = document.querySelector("canvas").getContext("2d");
 
+      var grad = cx.createLinearGradient(0.3, 0, 0.9, 0);
+      grad.addColorStop("0", "orange");
+      grad.addColorStop("0.5", "blue");
+      grad.addColorStop("1.0", "green");
+      cx.fillStyle = grad;
+      cx.lineWidth = 20;
+
       function branch(length, angle, scale) {
         cx.fillRect(0, 0, 1, length);
         if (length < 8) return;
@@ -21,9 +28,9 @@
         cx.restore();
       }
 
-      cx.translate(300, 0);
+      cx.translate(500, 0);
 
-      branch(90, 0.6, 0.8);
+      branch(100, 0.6, 0.8);
     </script>
   </body>
 </html>

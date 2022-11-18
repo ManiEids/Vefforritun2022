@@ -5,8 +5,10 @@
     <title>Branch</title>
   </head>
   <body>
-    <canvas width="1000" height="1000"></canvas>
+    <canvas width="1400" height="1400"></canvas>
     <script>
+      document.body.style.backgroundColor = grad;
+
       const cx = document.querySelector("canvas").getContext("2d");
 
       var grad = cx.createLinearGradient(0.3, 0, 0.9, 0);
@@ -15,10 +17,16 @@
       grad.addColorStop("1.0", "green");
       cx.fillStyle = grad;
       cx.lineWidth = 20;
+      cx.shadowColor = "purple";
+      cx.shadowOffsetX = 0;
+      cx.shadowOffsetY = 0;
+      cx.shadowBlur = 2;
+
+      document.body.style.backgroundColor = "gray";
 
       function branch(length, angle, scale) {
         cx.fillRect(0, 0, 1, length);
-        if (length < 8) return;
+        if (length < 9) return;
         cx.save();
         cx.translate(0, length);
         cx.rotate(-angle);
@@ -30,7 +38,7 @@
 
       cx.translate(500, 0);
 
-      branch(100, 0.6, 0.8);
+      branch(200, 0.6, 0.8);
     </script>
   </body>
 </html>

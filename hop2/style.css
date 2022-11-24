@@ -18,26 +18,44 @@ body {
   flex-wrap: wrap;
 }
 .card {
+  display: flex;
+  flex-direction: column;
   width: 30%;
+  height: 600px;
   box-shadow: 0 0 4px 3px pink;
   text-align: center;
-
   margin-bottom: 3rem;
+  padding: 0.2rem;
   background-color: rgb(237, 132, 109);
 }
-.images {
-  height: 50%;
-  width: 100%;
+p {
+  max-height: 10px;
 }
 .title {
+  word-wrap: break-word;
+  overflow: hidden;
   font-size: 1.3rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  max-height: 48px;
+  text-overflow: ellipsis;
+}
+.images {
+  height: 33%;
+  width: 100%;
+  object-fit: cover;
 }
 .category,
-.price {
+.place {
   font-weight: bold;
   text-transform: capitalize;
-  margin: 1em;
   font-size: 1em;
+  word-wrap: break-word;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  max-height: 38px;
+  text-overflow: ellipsis;
 }
 input[type="text"] {
   width: 80%;
@@ -45,4 +63,15 @@ input[type="text"] {
   margin: 8px 0;
   margin-left: 3rem;
   box-sizing: border-box;
+}
+#map {
+  height: 200px;
+  width: 200x;
+}
+#maps {
+  display: block;
+  margin-top: auto;
+  width: 100%;
+  height: 20%;
+  box-shadow: 0 0 4px 3px rgb(192, 255, 221);
 }

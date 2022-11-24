@@ -31,8 +31,8 @@ fetch(
     }    alt="img" class="images" />
     <h1 class="title">${values.language.is.title}</h1>
     <p>Dagsetning:${values.start.substring(8, 10)}Ágúst</p>
-    <p>Byrjar:${values.start.substring(11, 16)}</p>
-    <p>Endar:${values.end.substring(11, 16)}</p>
+    <p>Upphaf:  ${values.start.substring(11, 16)}</p>
+    <p>Endar:  ${values.end.substring(11, 16)}</p>
     <p class="place">${values.language.is.place}</p>
     <div id="maps"><p>Hér ætti kort að koma</p>
     ${values.location[0]}

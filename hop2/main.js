@@ -1,16 +1,17 @@
-const API_URL = "https://hvirfill.reykjavik.is";
+const API_URnL = "https://hvirfill.reykjavik.is";
 const event_URL = "https://menningarnott.is/dagskra?event=";
 
-var map;
-initMap();
-function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: {
-      lat: 64.1494763586437 /* values.location[0]*/,
-      lng: -21.9414147881113 /*values.location[1]*/,
-    },
-    zoom: 8,
+function initMap(index, lat, lng) {
+  const map = new google.maps.Map(document.getElementById(`map-${index}`), {
+    zoom: 15,
+    center: { lat, lng },
   });
+  const marker = new google.maps.Marker({ position: { lat, lng }, map: map });
+  return marker;
+}
+
+function checkTags(tags, index) {
+  /*takavið input fra form og filtera display*/
 }
 
 fetch(
@@ -21,27 +22,48 @@ fetch(
   })
   .then((completedata) => {
     let data1 = "";
-    completedata.map((values) => {
+    completedata.map((value, index) => {
       data1 += `
        <div class="card" onclick="window.open('${event_URL}${
-        values.id
+        value.id
       }','mywindow');" style="cursor: pointer;">&nbsp;
     <img src= https://hvirfill.reykjavik.is${
-      values.event_image
+      value.event_image
     }    alt="img" class="images" />
-    <h1 class="title">${values.language.is.title}</h1>
-    <p>Dagsetning:${values.start.substring(8, 10)}Ágúst</p>
-    <p>Upphaf:  ${values.start.substring(11, 16)}</p>
-    <p>Endar:  ${values.end.substring(11, 16)}</p>
-    <p class="place">${values.language.is.place}</p>
-    <div id="maps"><p>Hér ætti kort að koma</p>
-    ${values.location[0]}
-    ${values.location[1]}<p>
-  kem ekki billing i gegn</p></div>
+    <h1 class="title">${value.language.is.title}</h1>
+    <p>${value.start.substring(8, 10)}.Ágúst</p>
+    <p>Upphaf:  ${value.start.substring(11, 16)}</p>
+    <p>Endar:  ${value.end.substring(11, 16)}</p>
+    <p class="place">${value.language.is.place}</p>
+    <div class="map" id="map-${index}"> </div>
   </div>`;
     });
     document.getElementById("cards").innerHTML = data1;
+    completedata.map((value, index) => {
+      let lat = value.location[0];
+      let lng = value.location[1];
+      initMap(index, lat, lng);
+    });
+    /*document.getElementById("cards").innerHTML = data1;
+    completedata.map((value) => {
+      let tags = value.tags;
+      console.log(tags);
+      checkTags(tags);
+    });*/
   })
   .catch((error) => {
     console.log(error);
   });
+
+/**************TODO**************** buinn með timann
+   * Búa til filter með input frá form til að fela óviðeigandi kort
+   * nota array filter og words includes 
+   * Setja filter Display:status hidden á það sem uppfyllir ekki skylirði
+ const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+const result = words.filter(word => word.includes("e"));
+
+console.log(result);
+// expected output: Array ["exuberant", "destruction", "present"]
+
+   */

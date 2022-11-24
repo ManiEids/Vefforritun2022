@@ -1,8 +1,3 @@
- {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 body {
   background-color: #89e6ab;
 }
@@ -11,6 +6,9 @@ body {
   font-size: 3rem;
   margin-bottom: 1.5rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+#Banner {
+  width: 100%;
 }
 #cards {
   display: flex;
@@ -34,14 +32,15 @@ p {
 .title {
   word-wrap: break-word;
   overflow: hidden;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  max-height: 48px;
+  max-height: 50px;
   text-overflow: ellipsis;
 }
 .images {
-  height: 33%;
+  margin-top: -1.3rem;
+  height: 35%;
   width: 100%;
   object-fit: cover;
 }
@@ -64,14 +63,11 @@ input[type="text"] {
   margin-left: 3rem;
   box-sizing: border-box;
 }
-#map {
-  height: 200px;
-  width: 200x;
-}
-#maps {
+
+.map {
   display: block;
   margin-top: auto;
+  height: 25%;
   width: 100%;
-  height: 20%;
   box-shadow: 0 0 4px 3px rgb(192, 255, 221);
 }

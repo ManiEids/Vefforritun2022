@@ -1,5 +1,23 @@
 # Vefforritun 1, 2022, hópverkefni 2
 
+Sækir json frá hvirfill.reykjavik.is
+
+keyrt með npm run dev
+
+smíðað með vite
+
+keyrt með vite build á netlify
+
+Vegna Cors error þarf að notast við addon á vafra t.d. MOESIF Origin & CORS changer
+
+//það er ýmislegt sem hefði verið gaman að bæta við en ég byrjaði of seint á þessu verkefni.
+t.d. virkja leitarmöguleika
+Skipta niður í síður
+Búa til síður fyrir viðburði í stað hyperlinks á vef menningarnætur
+ofl.
+
+*****************************************************************************************************************************************
+
 Verkefnið felst í að útbúa vef sem birtir viðburði (eða, endurgera dagskrárvef Menningarnætur sjá þó nánar í yfirferð um útlit).
 
 Vefur skal vera prófaður og virka í nýjustu útgáfum af Firefox og Chrome.

@@ -8,6 +8,15 @@ smíðað með vite
 
 keyrt með vite build á netlify
 
+uppsetningin er mjög hrá.
+
+Index fyrir html
+styles fyrir css
+main fyrir javascript
+
+Lint er ekki sett upp heldur leyfi ég vite að stjórna.
+
+
 Vegna Cors error þarf að notast við addon á vafra t.d. MOESIF Origin & CORS changer
 
 //það er ýmislegt sem hefði verið gaman að bæta við en ég byrjaði of seint á þessu verkefni.
